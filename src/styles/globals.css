@@ -1,0 +1,687 @@
+/* Modern CSS Reset and Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f8f9fa;
+  text-align: center;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Custom Properties */
+:root {
+  --primary-color: #222;
+  --secondary-color: #444;
+  --accent-color: #007acc;
+  --background-light: #f8f9fa;
+  --background-white: #fff;
+  --text-primary: #222;
+  --text-secondary: #444;
+  --text-light: #b0b0b0;
+  --shadow-light: 0 2px 16px rgba(0, 0, 0, 0.07);
+  --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+  --max-width: 1200px;
+  --section-padding: clamp(2rem, 5vw, 4rem);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 600;
+  text-align: center;
+}
+
+h3 {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 600;
+  text-align: center;
+}
+
+p {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Section Styles */
+.section {
+  padding: var(--section-padding) 0;
+  width: 100%;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.btn:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Card Styles */
+.card {
+  background: var(--background-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  padding: 2rem;
+  transition: var(--transition);
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Grid Layouts */
+.grid {
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Focus States */
+*:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-color);
+  color: white;
+}
+
+/* Ensure all sections are centered */
+section {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Center all content within sections */
+section > div {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Center form elements */
+form {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Center buttons */
+button {
+  text-align: center;
+}
+
+/* Ensure App container is centered */
+.App {
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* Force center all content */
+* {
+  text-align: center;
+}
+
+/* Override any left alignment */
+.text-left,
+.text-start {
+  text-align: center !important;
+}
+
+/* Center all motion components */
+[data-framer-motion] {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Center all React components */
+div {
+  text-align: center;
+}
+
+/* Center all spans and other inline elements */
+span,
+a,
+strong,
+em,
+b,
+i {
+  text-align: center;
+}
+
+/* Center all lists */
+ul,
+ol {
+  text-align: center;
+  list-style-position: inside;
+}
+
+li {
+  text-align: center;
+}
+
+/* Center all images */
+img {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Center all inputs and form elements */
+input,
+textarea,
+select {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Responsive container widths */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 95%;
+    padding: 0 1rem;
+  }
+}
+
+/* Hero Section Custom Classes */
+.hero-avatar {
+  margin: 0 auto 2rem auto;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 120px;
+  height: 120px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: #222;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+.hero-subtitle {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 2rem;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+.hero-description {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  color: #888;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.6;
+  font-weight: 300;
+  text-align: center;
+}
+.hero-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* Contact Section Custom Classes */
+.contact-title {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: #222;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+.contact-description {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.6;
+  font-weight: 300;
+  text-align: center;
+}
+.contact-form-title,
+.contact-info-title {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: #222;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contact-socials {
+  margin-top: 2rem;
+  text-align: center;
+}
+.contact-socials-title {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #222;
+  text-align: center;
+}
+.contact-socials-list {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.contact-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .hero-avatar {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* About Section Custom Classes */
+.about-title {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: #222;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+.about-description-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.about-description {
+  font-size: clamp(1.1rem, 2.5vw, 1.2rem);
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  text-align: center;
+}
+.about-skills-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.about-skills-title {
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: #333;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+.about-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+.about-skill {
+  background-color: #f5f5f5;
+  color: #666;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  display: inline-block;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  transition: background 0.2s, color 0.2s;
+}
+.about-cta {
+  margin-top: 3rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Projects Section Custom Classes */
+.projects-title {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: #222;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+.projects-description {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.6;
+  font-weight: 300;
+  text-align: center;
+}
+.projects-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+.project-card {
+  /* inherits from .card */
+  background-color: white;
+  border: 1px solid #e0e0e0;
+}
+.project-title {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #222;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+.project-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+}
+.project-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+.project-tech {
+  background-color: #f5f5f5;
+  color: #666;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 400;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+}
+.project-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  text-align: center;
+}
+.projects-cta {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+/* Services Section Custom Classes */
+.services-title {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: #222;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+.services-description {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.6;
+  font-weight: 300;
+  text-align: center;
+}
+.services-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+.service-card {
+  /* inherits from .card */
+  background-color: #fafafa;
+  border: 1px solid #e0e0e0;
+}
+.service-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: var(--background-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+  text-align: center;
+}
+.service-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #222;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+.service-description {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  font-weight: 300;
+  text-align: center;
+}
+.services-cta {
+  margin-top: 3rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .about-skills-list {
+    gap: 0.5rem;
+  }
+  .projects-grid,
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
