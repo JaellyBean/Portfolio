@@ -5,14 +5,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/mode-toggle";
+import { Button } from "./components/ui/button";
 
 function App() {
   return (
@@ -155,7 +151,16 @@ function App() {
                 <CardTitle>Contact</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>Content coming soon...</p>
+                <Button variant="secondary" asChild>
+                  <a href="https://ko-fi.com/solarisdev" target="_blank">
+                    Support Me!
+                  </a>
+                </Button>
+                <Button variant="outline" asChild>
+                  <a href="https://github.com/JaellyBean" target="_blank">
+                    GitHub
+                  </a>
+                </Button>
               </CardContent>
             </Card>
           </div>
