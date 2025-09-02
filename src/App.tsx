@@ -151,16 +151,47 @@ function App() {
                 <CardTitle>Contact</CardTitle>
               </CardHeader>
               <CardContent>
-                <Button variant="secondary" asChild>
-                  <a href="https://ko-fi.com/solarisdev" target="_blank">
-                    Support Me!
-                  </a>
-                </Button>
-                <Button variant="outline" asChild>
-                  <a href="https://github.com/JaellyBean" target="_blank">
-                    GitHub
-                  </a>
-                </Button>
+                <div className="space-y-4">
+                  {/* Contact Information */}
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <span className="text-gray-600 dark:text-gray-400">
+                        Email:
+                      </span>
+                      <a
+                        href="mailto:your.email@example.com"
+                        className="text-blue-600 dark:text-blue-400 hover:underline"
+                      >
+                        solarisrex@pm.me
+                      </a>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-gray-600 dark:text-gray-400">
+                        GitHub:
+                      </span>
+                      <a
+                        href="https://github.com/JaellyBean"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 dark:text-blue-400 hover:underline"
+                      >
+                        github.com/JaellyBean
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-2">
+                    <a
+                      href="https://ko-fi.com/solarisdev"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-4 py-2 bg-emerald-600 text-white rounded-md hover:bg-emerald-700 transition-colors"
+                    >
+                      Support Me!
+                    </a>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
