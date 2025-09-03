@@ -29,7 +29,7 @@ function App() {
             Jae F.
           </h1>
           <h2 className="text-2xl font-semibold text-blue-600 dark:text-blue-400">
-            Solaris Rex
+            Solaris
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 italic">
             Creating for a better future
@@ -152,13 +152,19 @@ function App() {
               <CardContent>
                 <div className="space-y-4">
                   {/* Contact Information */}
+                  <p>
+                    Reach out to me via email or check out my GitHub! You can
+                    also support me on Ko-fi,
+                    <br /> it helps me keep the lights on and the machines
+                    running!
+                  </p>
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <span className="text-gray-600 dark:text-gray-400">
                         Email:
                       </span>
                       <a
-                        href="mailto:your.email@example.com"
+                        href="mailto:solarisrex@pm.me"
                         className="text-blue-600 dark:text-blue-400 hover:underline"
                       >
                         solarisrex@pm.me
@@ -187,7 +193,7 @@ function App() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center px-4 py-2 bg-emerald-600 text-white rounded-md hover:bg-emerald-700 transition-colors"
                     >
-                      Support Me!
+                      Support Me on Ko-fi!
                     </a>
                   </div>
                 </div>
