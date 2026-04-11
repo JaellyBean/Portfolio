@@ -1,80 +1,54 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   font-family: "League Spartan", sans-serif;
 }
 
-.logo {
-  height: 80px;
-  width: 80px;
-  border-radius: 50%;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.portfolio-app {
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+.portfolio-hero {
+  background-image: linear-gradient(
+    180deg,
+    oklch(0.99 0 0) 0%,
+    oklch(0.985 0 0) 100%
+  );
+}
+
+.dark .portfolio-hero {
+  background-image: linear-gradient(
+    180deg,
+    oklch(0.16 0 0) 0%,
+    oklch(0.145 0 0) 100%
+  );
+}
+
+.portfolio-logo-sm,
+.portfolio-logo-lg {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.logo:hover {
+.portfolio-logo-lg:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 40px oklch(0 0 0 / 12%);
 }
 
-.logo.react:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+.dark .portfolio-logo-lg:hover {
+  box-shadow: 0 12px 40px oklch(0 0 0 / 35%);
 }
 
-/* Remove the spinning animation for a more professional look */
-/* @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-} */
-
-.card {
-  padding: 2em;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  margin-top: 2rem;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.dark .card {
-  background: rgb(31, 41, 55);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.read-the-docs {
-  color: #7f8c8d;
-  font-style: italic;
-  margin-top: 1rem;
-}
-
-/* Welcoming color palette updates */
 body {
-  background-color: #fafafa;
-  color: #374151;
-}
-
-.dark body {
-  background-color: #111827;
-  color: #f9fafb;
+  margin: 0;
+  min-width: 320px;
 }
 
 /* Smooth transitions for theme switching */
-* {
-  transition: background-color 0.3s ease, color 0.3s ease,
-    border-color 0.3s ease;
+.portfolio-app *,
+.portfolio-app *::before,
+.portfolio-app *::after {
+  transition: background-color 0.25s ease, color 0.25s ease,
+    border-color 0.25s ease, box-shadow 0.25s ease;
 }
