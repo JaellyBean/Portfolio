@@ -200,6 +200,52 @@ function App() {
                       </AccordionContent>
                     </AccordionItem>
                     <AccordionItem
+                      value="qr-scanner"
+                      className="border-border/80 px-4 sm:px-6"
+                    >
+                      <AccordionTrigger className="py-5 text-left hover:no-underline [&[data-state=open]]:text-foreground">
+                        <div className="flex flex-wrap items-center gap-2 pr-2">
+                          <span className="font-semibold">QR Codify</span>
+                          <Badge
+                            variant="secondary"
+                            className="border-emerald-500/25 bg-emerald-500/10 text-emerald-800 dark:text-emerald-300"
+                          >
+                            Active
+                          </Badge>
+                        </div>
+                      </AccordionTrigger>
+                      <AccordionContent className="pb-6 text-muted-foreground">
+                        <div className="space-y-5 border-t border-border/50 pt-4">
+                          <p className="leading-relaxed">
+                            A web app that uses the device camera to scan QR codes
+                            in the browser, with a clean interface for quick
+                            decoding and sharing results. Built to run on modern
+                            mobile and desktop browsers.
+                          </p>
+                          <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+                            <a
+                              href="https://qrcodify-iota.vercel.app"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:min-w-[10rem] sm:flex-initial"
+                            >
+                              Live Website
+                              <ExternalLink className="h-4 w-4 opacity-80" aria-hidden />
+                            </a>
+                            <a
+                              href="https://github.com/JaellyBean/qrcodify"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-md border border-border bg-background px-4 text-sm font-medium shadow-sm transition hover:bg-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:min-w-[10rem] sm:flex-initial"
+                            >
+                              GitHub Code
+                              <Github className="h-4 w-4 opacity-80" aria-hidden />
+                            </a>
+                          </div>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem
                       value="bennu"
                       className="border-border/80 px-4 sm:px-6"
                     >
