@@ -232,15 +232,6 @@ function App() {
                               Live Website
                               <ExternalLink className="h-4 w-4 opacity-80" aria-hidden />
                             </a>
-                            <a
-                              href="https://github.com/JaellyBean/qrcodify"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-md border border-border bg-background px-4 text-sm font-medium shadow-sm transition hover:bg-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:min-w-[10rem] sm:flex-initial"
-                            >
-                              GitHub Code
-                              <Github className="h-4 w-4 opacity-80" aria-hidden />
-                            </a>
                           </div>
                         </div>
                       </AccordionContent>
