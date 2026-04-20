@@ -26,7 +26,7 @@ function App() {
           <div className="mx-auto max-w-5xl px-4 sm:px-6">
             <div className="relative flex h-14 items-center justify-between md:h-16">
               <a
-                href="https://solarisdev.vercel.app"
+                href="https://madebysolaris.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3 outline-none ring-offset-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-lg"
@@ -107,7 +107,7 @@ function App() {
               </div>
               <div className="order-1 flex justify-center md:order-2 md:justify-end">
                 <a
-                  href="https://solarisdev.vercel.app"
+                  href="https://madebysolaris.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative block outline-none ring-offset-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-full"
