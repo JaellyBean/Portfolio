@@ -334,24 +334,24 @@ function App() {
                     </li>
                   </ul>
 
-                  <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                     <a
                       href="https://ko-fi.com/solarisdev"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:min-w-[12rem] sm:flex-initial"
+                      className="flex min-h-11 w-full min-w-0 items-center justify-center gap-2 rounded-md bg-primary px-3 py-2 text-center text-sm font-medium leading-snug text-primary-foreground shadow transition hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:px-4"
                     >
                       Support Me on Ko-fi!
-                      <ExternalLink className="h-4 w-4 opacity-80" aria-hidden />
+                      <ExternalLink className="h-4 w-4 shrink-0 opacity-80" aria-hidden />
                     </a>
                     <a
                       href="https://madebysolaris.gumroad.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-md border border-border bg-background px-4 text-sm font-medium shadow-sm transition hover:bg-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:min-w-[12rem] sm:flex-initial"
+                      className="flex min-h-11 w-full min-w-0 items-center justify-center gap-2 rounded-md border border-border bg-background px-3 py-2 text-center text-sm font-medium leading-snug shadow-sm transition hover:bg-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:px-4"
                     >
                       Check out my Gumroad store!
-                      <ExternalLink className="h-4 w-4 opacity-80" aria-hidden />
+                      <ExternalLink className="h-4 w-4 shrink-0 opacity-80" aria-hidden />
                     </a>
                   </div>
                 </CardContent>
