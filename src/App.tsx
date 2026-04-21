@@ -300,9 +300,7 @@ function App() {
                 <CardContent className="space-y-8 p-6 sm:p-8">
                   <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
                     Reach out to me via email or check out my GitHub! You can
-                    also support me on Ko-fi,
-                    <br />
-                    it helps me keep the lights on and the machines running!
+                    also support me on Ko-fi, it helps me keep the lights, the machines running, and your project's delivered!
                   </p>
 
                   <ul className="divide-y divide-border/80 rounded-lg border border-border/80 bg-background/50">
